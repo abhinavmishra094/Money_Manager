@@ -28,13 +28,38 @@ public class Fragment_ViewPager extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            Yearly yearly = new Yearly();
-
             Bundle bundle = new Bundle();
-            bundle.putInt("position",position);
+            bundle.putInt("position", position);
+          if(position==1)
+          {
 
-            yearly.setArguments(bundle);
-            return yearly;
+              DailyFragment dailyFragment = new DailyFragment();
+              dailyFragment.setArguments(bundle);
+              return dailyFragment;
+
+          }
+            else  if (position==2)
+          {
+           Yearly yearly = new Yearly();
+
+              return yearly;
+          }
+          else  if (position==3)
+          {
+              Yearly yearly = new Yearly();
+
+              return yearly;
+          }
+          else  if (position==4)
+          {
+              Yearly yearly = new Yearly();
+
+              return yearly;
+          }
+            else
+          return new DailyFragment();
+
+
         }
 
         @Override
