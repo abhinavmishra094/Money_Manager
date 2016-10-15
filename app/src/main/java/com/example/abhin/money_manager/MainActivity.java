@@ -1,5 +1,6 @@
 package com.example.abhin.money_manager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -69,16 +70,26 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
+        Intent intent = new Intent(MainActivity.this,Options_Menu.class);
         //noinspection SimplifiableIfStatement
         switch (id)
         {
             case R.id.action_settings:
+                intent.putExtra("option_selected","settings");
+                startActivity(intent);
+
                 break;
             case R.id.report_bugs:
+                intent.putExtra("option_selected","report_bugs");
+                startActivity(intent);
                 break;
             case R.id.suggest_feautre:
+                intent.putExtra("option_selected","suggest_feature");
+                startActivity(intent);
                 break;
             case R.id.about_us:
+                intent.putExtra("option_selected","about_us");
+                startActivity(intent);
                 break;
         }
 
