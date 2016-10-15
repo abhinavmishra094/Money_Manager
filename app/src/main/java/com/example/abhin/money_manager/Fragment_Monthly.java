@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -15,14 +16,13 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Yearly extends Fragment {
+public class Fragment_Monthly extends Fragment {
 
-
-    ListView listView ;
-    ArrayList<String> arrayList;
+    ListView listView;
     ArrayAdapter<String> arrayAdapter;
+    ArrayList<String> arrayList;
 
-    public Yearly() {
+    public Fragment_Monthly() {
         // Required empty public constructor
     }
 
@@ -31,13 +31,14 @@ public class Yearly extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_yearly, container, false);
-        arrayList = new ArrayList<String>();
-        listView = (ListView) view.findViewById(R.id.yearly);
-        arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
-        arrayList.add("4");
-        listView.setAdapter(arrayAdapter);
+        View view = inflater.inflate(R.layout.fragment__monthly, container, false);
 
+        arrayList = new ArrayList<>();
+        listView = (ListView) view.findViewById(R.id.monthly);
+        arrayList.add("3");
+        arrayAdapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+
+        listView.setAdapter(arrayAdapter);
 
         return view;
     }

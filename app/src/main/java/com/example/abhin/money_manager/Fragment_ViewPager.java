@@ -28,33 +28,30 @@ public class Fragment_ViewPager extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            Bundle bundle = new Bundle();
-            bundle.putInt("position", position);
-          if(position==1)
+
+          if(position==0)
           {
 
-              DailyFragment dailyFragment = new DailyFragment();
-              dailyFragment.setArguments(bundle);
-              return dailyFragment;
+
+              return new DailyFragment();
 
           }
-            else  if (position==2)
+            else  if (position==1)
           {
-           Yearly yearly = new Yearly();
 
-              return yearly;
+              return new Fragment_Weekly();
+          }
+          else  if (position==2)
+          {
+
+
+              return new Fragment_Monthly();
           }
           else  if (position==3)
           {
-              Yearly yearly = new Yearly();
 
-              return yearly;
-          }
-          else  if (position==4)
-          {
-              Yearly yearly = new Yearly();
 
-              return yearly;
+              return new Yearly();
           }
             else
           return new DailyFragment();

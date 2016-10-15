@@ -6,4 +6,19 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/report_bugs"
+        android:orderInCategory="100"
+        android:title="@string/ReportBugs"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/suggest_feautre"
+        android:orderInCategory="100"
+        android:title="@string/suggest"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/about_us"
+        android:orderInCategory="100"
+        android:title="@string/aboutus"
+        app:showAsAction="never" />
 </menu>

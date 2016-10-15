@@ -1,6 +1,7 @@
 package com.example.abhin.money_manager;
 
 
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,14 +16,13 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Yearly extends Fragment {
+public class Fragment_Weekly extends Fragment {
 
-
-    ListView listView ;
-    ArrayList<String> arrayList;
+    ListView listView;
     ArrayAdapter<String> arrayAdapter;
+    ArrayList<String> arrayList;
 
-    public Yearly() {
+    public Fragment_Weekly() {
         // Required empty public constructor
     }
 
@@ -31,15 +31,16 @@ public class Yearly extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_yearly, container, false);
-        arrayList = new ArrayList<String>();
-        listView = (ListView) view.findViewById(R.id.yearly);
-        arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
-        arrayList.add("4");
+        View view = inflater.inflate(R.layout.fragment__weekly, container, false);
+        listView = (ListView) view.findViewById(R.id.weekly);
+        arrayList = new ArrayList<>();
+        arrayList.add("2");
+        arrayAdapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+
         listView.setAdapter(arrayAdapter);
 
 
-        return view;
+        return  view;
     }
 
 }

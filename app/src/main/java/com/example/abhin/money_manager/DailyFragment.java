@@ -30,11 +30,10 @@ public class DailyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_daily, container, false);
-        listView = (ListView) view.findViewById(R.id.listView);
+        listView = (ListView) view.findViewById(R.id.daily);
         arrayList = new ArrayList<>();
         arrayList.add("1");
-        arrayList.add("1");
-        arrayList.add("1");
+
         arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
 
         listView.setAdapter(arrayAdapter);

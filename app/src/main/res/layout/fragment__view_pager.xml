@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mytab1"
+        app:tabMinWidth="100dp"
         app:tabTextColor="#f00"
         android:background="@color/colorPrimary"
         app:tabMode="scrollable"></android.support.design.widget.TabLayout>
