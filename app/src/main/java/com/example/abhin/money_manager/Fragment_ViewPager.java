@@ -20,7 +20,7 @@ public class Fragment_ViewPager extends Fragment {
     TabLayout tabLayout;
     public  class  MyAdapter extends FragmentPagerAdapter
     {
-        String arr[] = {"one","two","three","four"};
+        String arr[] = {"Daily","Weekly","Monthly","Yearly"};
 
         public MyAdapter(FragmentManager fm) {
             super(fm);
@@ -28,12 +28,23 @@ public class Fragment_ViewPager extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-            return null;
+            Yearly yearly = new Yearly();
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("position",position);
+
+            yearly.setArguments(bundle);
+            return yearly;
         }
 
         @Override
         public int getCount() {
             return arr.length;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return arr[position];
         }
     }
 
@@ -49,13 +60,13 @@ public class Fragment_ViewPager extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment__view_pager, container, false);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment__view_pager,null);
 
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager1);
-        tabLayout = (TabLayout) view.findViewById(R.id.mytab);
-        myAdapter = new MyAdapter(getChildFragmentManager());
+        viewPager = (ViewPager) view.findViewById(R.id.viewPager11);
+       tabLayout = (TabLayout) view.findViewById(R.id.mytab1);
+        myAdapter = new MyAdapter(getActivity().getSupportFragmentManager());
         viewPager.setAdapter(myAdapter);
-        tabLayout.setupWithViewPager(viewPager);
+      tabLayout.setupWithViewPager(viewPager);
 
 
 
