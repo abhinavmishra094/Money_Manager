@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.graph,fragment_graph);
         fragmentTransaction.add(R.id.viewpager,fragment_viewPager);
-        fragmentTransaction.addToBackStack(null);
+        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
 
@@ -108,6 +108,8 @@ public class MainActivity extends AppCompatActivity
         {
             case  R.id.nav_credit:
 
+                intent.putExtra("option_selected","credit");
+                startActivity(intent);
                 break;
 
             case  R.id.nav_custom_expenditure:
