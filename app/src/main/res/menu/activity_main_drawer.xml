@@ -13,15 +13,15 @@
         <item
             android:id="@+id/nav_daily"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Daily Expenditure Limit " />
+            android:title="Daily Expenditure  " />
         <item
             android:id="@+id/nav_monthly"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Monthly Expenditurelimit" />
+            android:title="Monthly Expenditure" />
         <item
             android:id="@+id/nav_expend_limit"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Expenditure Limit" />
+            android:title="Expenditure" />
     </group>
 
 

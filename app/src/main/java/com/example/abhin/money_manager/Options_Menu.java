@@ -19,6 +19,8 @@ public class Options_Menu extends AppCompatActivity  {
 
         Settings settings = new Settings();
         Credit_fragment credit_fragment = new Credit_fragment();
+        Expenditure expenditure = new Expenditure();
+        DailyExpenditure dailyExpenditure = new DailyExpenditure();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //fragmentTransaction.addToBackStack(null);
@@ -34,6 +36,20 @@ public class Options_Menu extends AppCompatActivity  {
                 break;
             case "credit":
                 fragmentTransaction.add(R.id.options,credit_fragment);
+                fragmentTransaction.commit();
+
+
+
+                break;
+            case "expenditure":
+                fragmentTransaction.add(R.id.options,expenditure);
+                fragmentTransaction.commit();
+
+
+
+                break;
+            case "daily":
+                fragmentTransaction.add(R.id.options,dailyExpenditure);
                 fragmentTransaction.commit();
 
 

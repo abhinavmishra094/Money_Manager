@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Credit_fragment extends Fragment {
+public class Expenditure extends Fragment {
 
 
-    public Credit_fragment() {
+    public Expenditure() {
         // Required empty public constructor
     }
 
@@ -23,10 +23,12 @@ public class Credit_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.credit_fragment, container, false);
-        ((Options_Menu)getActivity()).setActionBarTitle("Add Credit");
+        View view = inflater.inflate(R.layout.fragment_expenditure, container, false);
+        ((Options_Menu)getActivity()).setActionBarTitle("Custom Expenditure");
 
-        return  view;
+
+
+        return view;
     }
 
 }

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.abhin.money_manager.Suggest_Feature">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:id="@+id/email"
+        android:hint="Enter Email Id"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:id="@+id/reportbugs"
+        android:hint="Suggest Feature"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:text="Cancel"
+            android:id="@+id/ccancel"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

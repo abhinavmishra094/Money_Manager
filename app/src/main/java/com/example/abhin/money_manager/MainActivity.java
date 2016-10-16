@@ -82,14 +82,16 @@ public class MainActivity extends AppCompatActivity
             case R.id.report_bugs:
                // intent.putExtra("option_selected","report_bugs");
                 //startActivity(intent);
+                Report_Bugs_Dialog report_bugs_dialog = new Report_Bugs_Dialog();
+                report_bugs_dialog.show(getSupportFragmentManager(),null);
                 break;
             case R.id.suggest_feautre:
-                //intent.putExtra("option_selected","suggest_feature");
-               // startActivity(intent);
+               Suggest_Feature suggest_feature = new Suggest_Feature();
+                suggest_feature.show(getSupportFragmentManager(),null);
                 break;
             case R.id.about_us:
-                //intent.putExtra("option_selected","about_us");
-                //startActivity(intent);
+                About_Us about_us = new About_Us();
+                about_us.show(getSupportFragmentManager(),null);
                 break;
         }
 
@@ -114,10 +116,14 @@ public class MainActivity extends AppCompatActivity
 
             case  R.id.nav_custom_expenditure:
 
+                intent.putExtra("option_selected","expenditure");
+                startActivity(intent);
                 break;
 
-            case  R.id.nav_daily:
 
+            case  R.id.nav_daily:
+                intent.putExtra("option_selected","daily");
+                startActivity(intent);
                 break;
 
             case  R.id.nav_expend_limit:
