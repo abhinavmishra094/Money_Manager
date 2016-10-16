@@ -80,16 +80,16 @@ public class MainActivity extends AppCompatActivity
 
                 break;
             case R.id.report_bugs:
-                intent.putExtra("option_selected","report_bugs");
-                startActivity(intent);
+               // intent.putExtra("option_selected","report_bugs");
+                //startActivity(intent);
                 break;
             case R.id.suggest_feautre:
-                intent.putExtra("option_selected","suggest_feature");
-                startActivity(intent);
+                //intent.putExtra("option_selected","suggest_feature");
+               // startActivity(intent);
                 break;
             case R.id.about_us:
-                intent.putExtra("option_selected","about_us");
-                startActivity(intent);
+                //intent.putExtra("option_selected","about_us");
+                //startActivity(intent);
                 break;
         }
 
@@ -101,17 +101,31 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Intent intent = new Intent(MainActivity.this,Options_Menu.class);
 
-        if (id == R.id.nav_credit) {
-            // Handle the camera action
-        } else if (id == R.id.nav_custom_expenditure) {
 
-        } else if (id == R.id.nav_daily) {
+        switch (id)
+        {
+            case  R.id.nav_credit:
 
-        } else if (id == R.id.nav_expend_limit) {
+                break;
 
-        } else if (id == R.id.nav_monthly) {
+            case  R.id.nav_custom_expenditure:
 
+                break;
+
+            case  R.id.nav_daily:
+
+                break;
+
+            case  R.id.nav_expend_limit:
+
+            break;
+
+            case  R.id.nav_monthly:
+
+
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

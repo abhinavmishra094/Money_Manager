@@ -3,6 +3,8 @@ package com.example.abhin.money_manager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,9 +34,13 @@ public class Settings extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        ((Options_Menu)getActivity()).setActionBarTitle("Settings");
+
+
+
         arrayList = new ArrayList<>();
         listView = (ListView) view.findViewById(R.id.settings);
-        arrayList.add("Settings");
+        //arrayList.add("Settings");
         arrayAdapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
 
         listView.setAdapter(arrayAdapter);
@@ -42,5 +48,8 @@ public class Settings extends Fragment {
 
         return  view;
     }
+
+
+
 
 }
