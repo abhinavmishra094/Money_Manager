@@ -33,6 +33,7 @@ public class About_Us extends DialogFragment {
         dialog =null;
 
         final AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
+
         aBuilder.setTitle("About Us");
         View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_about__us,null);
         Ok = (Button) view.findViewById(R.id.ok);

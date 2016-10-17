@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 public class Options_Menu extends AppCompatActivity  {
 
@@ -67,12 +68,28 @@ public class Options_Menu extends AppCompatActivity  {
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
 
     }
 
- /*   @Override
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+       switch (item.getItemId())
+       {
+           case android.R.id.home:
+               Intent intent = new Intent(Options_Menu.this,MainActivity.class);
+               startActivity(intent);
+               finish();
+       }
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+    /*   @Override
     public boolean onSupportNavigateUp() {
         getSupportFragmentManager().popBackStack();
         return true;
