@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.series.PointsGraphSeries;
 
 
 public class Fragment_Graph extends Fragment {
@@ -27,11 +29,15 @@ public class Fragment_Graph extends Fragment {
 
 
         GraphView graphView = (GraphView) view.findViewById(R.id.graph);
-        LineGraphSeries <DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3)
+        PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(new DataPoint[]{
+                new DataPoint(0,0),
+                new DataPoint(1, 2),
+                new DataPoint(2, 3),
+                new DataPoint(3, 4),
+                new DataPoint(4, 6),
+                new DataPoint(5, 7),
         });
+
 
 
         graphView.addSeries(series);

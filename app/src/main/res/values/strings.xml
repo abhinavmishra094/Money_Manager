@@ -12,4 +12,5 @@
     <string name="aboutus">About Us</string>
     <string name="suggest">Suggest Feature</string>
     <string name="about_us">about us</string>
+    <string name="title_activity_daily_frag">DailyFragActivity</string>
 </resources>

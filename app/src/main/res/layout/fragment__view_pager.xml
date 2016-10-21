@@ -4,19 +4,22 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:id="@+id/c1"
+
     tools:context="com.example.abhin.money_manager.Fragment_ViewPager">
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/viewpager1"
+        android:layout_weight="9"></android.support.v4.view.ViewPager>
     <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mytab1"
-        app:tabMinWidth="100dp"
-        app:tabTextColor="#f00"
-        android:background="@color/colorPrimary"
-        app:tabMode="scrollable"></android.support.design.widget.TabLayout>
-<android.support.v4.view.ViewPager
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/viewPager11"></android.support.v4.view.ViewPager>
-
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/tab1"
+        android:background="#ffeceff1"
+        android:layout_gravity="bottom"
+        ></android.support.design.widget.TabLayout>
 </LinearLayout>

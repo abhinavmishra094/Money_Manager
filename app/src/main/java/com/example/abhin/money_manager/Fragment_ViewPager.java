@@ -2,6 +2,8 @@ package com.example.abhin.money_manager;
 
 
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,16 +13,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnMenuTabSelectedListener;
 
 
 public class Fragment_ViewPager extends Fragment {
 
-    ViewPager viewPager ;
+
+    CoordinatorLayout coordinatorLayout;
     MyAdapter myAdapter;
+    ViewPager viewPager;
     TabLayout tabLayout;
     public  class  MyAdapter extends FragmentPagerAdapter
     {
-        String arr[] = {"Daily","Weekly","Monthly","Yearly"};
+        String arr[] = {"","","",""};
 
         public MyAdapter(FragmentManager fm) {
             super(fm);
@@ -84,13 +90,18 @@ public class Fragment_ViewPager extends Fragment {
 
         View view = getActivity().getLayoutInflater().inflate(R.layout.fragment__view_pager,null);
 
-        viewPager = (ViewPager) view.findViewById(R.id.viewPager11);
-       tabLayout = (TabLayout) view.findViewById(R.id.mytab1);
-        myAdapter = new MyAdapter(getActivity().getSupportFragmentManager());
+        viewPager = (ViewPager) view.findViewById(R.id.viewpager1);
+        tabLayout = (TabLayout) view.findViewById(R.id.tab1);
+        myAdapter = new MyAdapter(getFragmentManager());
         viewPager.setAdapter(myAdapter);
-      tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setSelectedTabIndicatorHeight(4);
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
 
-
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_view_list_black_48dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_account_balance_black_48dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_account_balance_wallet_white_48dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_account_balance_wallet_white_48dp);
 
 
         return  view;

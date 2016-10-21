@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transactions"
+        android:icon="@drawable/ic_update_white_24dp"
+        android:title="Transactions" />
+    <item
+        android:id="@+id/acount"
+        android:icon="@drawable/ic_location_on_white_24dp"
+        android:title="Account Balance" />
+    <item
+        android:id="@+id/budget"
+        android:icon="@drawable/ic_favorite_white_24dp"
+        android:title="Favorire" />
+</menu>

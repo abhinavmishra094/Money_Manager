@@ -1,12 +1,16 @@
 package com.example.abhin.money_manager;
 
 
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -15,11 +19,14 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DailyFragment extends Fragment {
+public class DailyFragment extends Fragment
+{
 
     ListView listView;
-    ArrayAdapter<String> arrayAdapter;
-    ArrayList<String> arrayList;
+    SimpleCursorAdapter transactions;
+    MyDatabase myDatabase;
+    Cursor cursor_transactions;
+    FloatingActionButton add;
     public DailyFragment() {
         // Required empty public constructor
     }
@@ -31,15 +38,35 @@ public class DailyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_daily, container, false);
         listView = (ListView) view.findViewById(R.id.daily);
-        arrayList = new ArrayList<>();
-        arrayList.add("1");
 
-        arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+        add = (FloatingActionButton) view.findViewById(R.id.add);
+        myDatabase = new MyDatabase(getActivity());
+        myDatabase.open();
+        cursor_transactions = myDatabase.getTransactionsReverse();
+        transactions = new SimpleCursorAdapter(getActivity(),R.layout.daily_row,cursor_transactions,new String[]{"image","amount","time"},new int[]{R.id.imgv,R.id.tr1,R.id.ti,});
 
-        listView.setAdapter(arrayAdapter);
+        add.setImageResource(R.drawable.ic_add_white_48dp);
+
+
+
+        listView.setAdapter(transactions);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Add_transaction add_transaction = new Add_transaction();
+                add_transaction.show(getFragmentManager(),null);
+            }
+        });
 
 
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        cursor_transactions = myDatabase.getTransactions();
+    }
 }
