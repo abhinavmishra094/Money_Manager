@@ -159,4 +159,10 @@ public class Add_transaction extends DialogFragment {
         dialog = aBuilder.create();
         return dialog;
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        myDatabase.close();
+    }
 }

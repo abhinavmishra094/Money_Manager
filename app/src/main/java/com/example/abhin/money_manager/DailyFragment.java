@@ -64,4 +64,10 @@ public class DailyFragment extends Fragment {
         super.onResume();
         cursor_transactions = myDatabase.getTransactions();
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        myDatabase.close();
+    }
 }
