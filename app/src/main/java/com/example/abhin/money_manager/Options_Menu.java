@@ -19,14 +19,12 @@ public class Options_Menu extends AppCompatActivity {
         String selected = bundle.getString("option_selected");
 
         Settings settings = new Settings();
-        Credit_fragment credit_fragment = new Credit_fragment();
+        CreditFragment credit_fragment = new CreditFragment();
         Expenditure expenditure = new Expenditure();
         DailyExpenditure dailyExpenditure = new DailyExpenditure();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //fragmentTransaction.addToBackStack(null);
-        //fragmentManager.addOnBackStackChangedListener(this);
-        //  shouldDisplayHomeUp();
+
 
         switch (selected) {
             case "settings":
@@ -56,15 +54,12 @@ public class Options_Menu extends AppCompatActivity {
 
     }
 
-   /* private void shouldDisplayHomeUp() {
-        boolean canback = getSupportFragmentManager().getBackStackEntryCount()>0;
-        getSupportActionBar().setDisplayHomeAsUpEnabled(canback);
-    }*/
+
 
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
 
     }
@@ -82,15 +77,5 @@ public class Options_Menu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    /*   @Override
-    public boolean onSupportNavigateUp() {
-        getSupportFragmentManager().popBackStack();
-        return true;
-    }
 
-    @Override
-    public void onBackStackChanged() {
-
-        shouldDisplayHomeUp();
-    }*/
 }
