@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class Yearly extends Fragment {
 
 
-    ListView listView ;
+    ListView listView;
     ArrayList<String> arrayList;
     ArrayAdapter<String> arrayAdapter;
 
@@ -34,7 +34,7 @@ public class Yearly extends Fragment {
         View view = inflater.inflate(R.layout.fragment_yearly, container, false);
         arrayList = new ArrayList<String>();
         listView = (ListView) view.findViewById(R.id.yearly);
-        arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
         arrayList.add("4");
         listView.setAdapter(arrayAdapter);
 

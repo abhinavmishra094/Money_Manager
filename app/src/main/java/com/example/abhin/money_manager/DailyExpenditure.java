@@ -24,8 +24,8 @@ public class DailyExpenditure extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-         View view = inflater.inflate(R.layout.fragment_daily_expenditure, container, false);
-        ((Options_Menu)getActivity()).setActionBarTitle("Daily Expenditure");
+        View view = inflater.inflate(R.layout.fragment_daily_expenditure, container, false);
+        ((Options_Menu) getActivity()).setActionBarTitle("Daily Expenditure");
 
 
         return view;

@@ -4,9 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.abhin.money_manager.Settings">
 
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/settings"></ListView>
+    <ListView
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

@@ -24,9 +24,9 @@ public class Credit_fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.credit_fragment, container, false);
-        ((Options_Menu)getActivity()).setActionBarTitle("Add Credit");
+        ((Options_Menu) getActivity()).setActionBarTitle("Add Credit");
 
-        return  view;
+        return view;
     }
 
 }

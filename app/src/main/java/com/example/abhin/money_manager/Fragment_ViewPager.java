@@ -2,7 +2,6 @@ package com.example.abhin.money_manager;
 
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -13,9 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnMenuTabSelectedListener;
-
 
 public class Fragment_ViewPager extends Fragment {
 
@@ -24,71 +20,16 @@ public class Fragment_ViewPager extends Fragment {
     MyAdapter myAdapter;
     ViewPager viewPager;
     TabLayout tabLayout;
-    public  class  MyAdapter extends FragmentPagerAdapter
-    {
-        String arr[] = {"","","",""};
-
-        public MyAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-
-          if(position==0)
-          {
-
-
-              return new DailyFragment();
-
-          }
-            else  if (position==1)
-          {
-
-              return new Fragment_Weekly();
-          }
-          else  if (position==2)
-          {
-
-
-              return new Fragment_Monthly();
-          }
-          else  if (position==3)
-          {
-
-
-              return new Yearly();
-          }
-            else
-          return new DailyFragment();
-
-
-        }
-
-        @Override
-        public int getCount() {
-            return arr.length;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return arr[position];
-        }
-    }
-
-
 
     public Fragment_ViewPager() {
 
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment__view_pager,null);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment__view_pager, null);
 
         viewPager = (ViewPager) view.findViewById(R.id.viewpager1);
         tabLayout = (TabLayout) view.findViewById(R.id.tab1);
@@ -104,7 +45,50 @@ public class Fragment_ViewPager extends Fragment {
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_account_balance_wallet_white_48dp);
 
 
-        return  view;
+        return view;
+    }
+
+    public class MyAdapter extends FragmentPagerAdapter {
+        String arr[] = {"", "", "", ""};
+
+        public MyAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+
+            if (position == 0) {
+
+
+                return new DailyFragment();
+
+            } else if (position == 1) {
+
+                return new Fragment_Weekly();
+            } else if (position == 2) {
+
+
+                return new Fragment_Monthly();
+            } else if (position == 3) {
+
+
+                return new Yearly();
+            } else
+                return new DailyFragment();
+
+
+        }
+
+        @Override
+        public int getCount() {
+            return arr.length;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return arr[position];
+        }
     }
 
 }

@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,7 +19,7 @@ public class Report_Bugs_Dialog extends DialogFragment {
 
     Dialog dialog;
     TextView reporbugs;
-    Button submit,cancel;
+    Button submit, cancel;
 
     public Report_Bugs_Dialog() {
         // Required empty public constructor
@@ -36,7 +34,7 @@ public class Report_Bugs_Dialog extends DialogFragment {
         AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
 
         aBuilder.setTitle("Report Bugs");
-        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_report__bugs__dialog,null);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_report__bugs__dialog, null);
 
 
         reporbugs = (TextView) view.findViewById(R.id.reportbugs);

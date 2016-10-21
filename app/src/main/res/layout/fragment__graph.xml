@@ -5,10 +5,10 @@
     tools:context="com.example.abhin.money_manager.Fragment_Graph">
 
     <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/graph"
-        android:background="@color/grey"/>
+        android:background="@color/grey" />
 
 
 </LinearLayout>

@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.abhin.money_manager.Fragment_Monthly">
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/monthly"></ListView>
+
+    <ListView
+        android:id="@+id/monthly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

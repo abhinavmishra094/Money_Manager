@@ -6,40 +6,42 @@
     tools:context="com.example.abhin.money_manager.Report_Bugs_Dialog">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:textSize="26sp"
         android:id="@+id/email"
-        android:hint="Enter Email Id"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:gravity="center"
-        android:textSize="26sp"
+        android:hint="Enter Email Id"
+        android:textSize="26sp" />
+
+    <EditText
         android:id="@+id/reportbugs"
-        android:hint="Mention Bugs"/>
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:hint="Mention Bugs"
+        android:textSize="26sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2">
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="1"
 
-        android:text="Submit"
-        android:id="@+id/submit"
-        android:layout_height="wrap_content"
-        />
         <Button
+            android:id="@+id/submit"
             android:layout_width="0dp"
-            android:layout_weight="1"
 
-            android:text="Cancel"
-            android:id="@+id/ccancel"
             android:layout_height="wrap_content"
-            />
+            android:layout_weight="1"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/ccancel"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
     </LinearLayout>
 </LinearLayout>

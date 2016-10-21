@@ -1,7 +1,6 @@
 package com.example.abhin.money_manager;
 
 
-import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -35,12 +34,12 @@ public class Fragment_Weekly extends Fragment {
         listView = (ListView) view.findViewById(R.id.weekly);
         arrayList = new ArrayList<>();
         arrayList.add("2");
-        arrayAdapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
         listView.setAdapter(arrayAdapter);
 
 
-        return  view;
+        return view;
     }
 
 }

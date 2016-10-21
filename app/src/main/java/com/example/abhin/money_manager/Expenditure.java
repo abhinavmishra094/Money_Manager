@@ -24,8 +24,7 @@ public class Expenditure extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_expenditure, container, false);
-        ((Options_Menu)getActivity()).setActionBarTitle("Custom Expenditure");
-
+        ((Options_Menu) getActivity()).setActionBarTitle("Custom Expenditure");
 
 
         return view;

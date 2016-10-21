@@ -6,16 +6,13 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-
 
 
 public class Suggest_Feature extends DialogFragment {
 
-   Dialog dialog ;
+    Dialog dialog;
+
     public Suggest_Feature() {
 
     }
@@ -28,8 +25,7 @@ public class Suggest_Feature extends DialogFragment {
         dialog = null;
         AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
         aBuilder.setTitle("Suggest Feature");
-        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_suggest__feature,null);
-
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_suggest__feature, null);
 
 
         aBuilder.setView(view);

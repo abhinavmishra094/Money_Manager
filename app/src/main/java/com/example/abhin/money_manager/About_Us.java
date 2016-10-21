@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 
 /**
@@ -30,12 +27,12 @@ public class About_Us extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        dialog =null;
+        dialog = null;
 
         final AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
 
         aBuilder.setTitle("About Us");
-        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_about__us,null);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_about__us, null);
         Ok = (Button) view.findViewById(R.id.ok);
 
         Ok.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +45,6 @@ public class About_Us extends DialogFragment {
 
         aBuilder.setView(view);
         dialog = aBuilder.create();
-        return  dialog;
+        return dialog;
     }
 }

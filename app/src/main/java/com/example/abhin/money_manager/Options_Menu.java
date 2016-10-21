@@ -1,13 +1,13 @@
 package com.example.abhin.money_manager;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 
-public class Options_Menu extends AppCompatActivity  {
+public class Options_Menu extends AppCompatActivity {
 
 
     @Override
@@ -26,33 +26,29 @@ public class Options_Menu extends AppCompatActivity  {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //fragmentTransaction.addToBackStack(null);
         //fragmentManager.addOnBackStackChangedListener(this);
-      //  shouldDisplayHomeUp();
+        //  shouldDisplayHomeUp();
 
-        switch (selected)
-        {
+        switch (selected) {
             case "settings":
 
-                fragmentTransaction.add(R.id.options,settings);
+                fragmentTransaction.add(R.id.options, settings);
                 fragmentTransaction.commit();
                 break;
             case "credit":
-                fragmentTransaction.add(R.id.options,credit_fragment);
+                fragmentTransaction.add(R.id.options, credit_fragment);
                 fragmentTransaction.commit();
-
 
 
                 break;
             case "expenditure":
-                fragmentTransaction.add(R.id.options,expenditure);
+                fragmentTransaction.add(R.id.options, expenditure);
                 fragmentTransaction.commit();
-
 
 
                 break;
             case "daily":
-                fragmentTransaction.add(R.id.options,dailyExpenditure);
+                fragmentTransaction.add(R.id.options, dailyExpenditure);
                 fragmentTransaction.commit();
-
 
 
                 break;
@@ -71,20 +67,17 @@ public class Options_Menu extends AppCompatActivity  {
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-       switch (item.getItemId())
-       {
-           case android.R.id.home:
-               Intent intent = new Intent(Options_Menu.this,MainActivity.class);
-               startActivity(intent);
-               finish();
-       }
-
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(Options_Menu.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+        }
 
 
         return super.onOptionsItemSelected(item);

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public class Fragment_Monthly extends Fragment {
         arrayList = new ArrayList<>();
         listView = (ListView) view.findViewById(R.id.monthly);
         arrayList.add("3");
-        arrayAdapter= new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
         listView.setAdapter(arrayAdapter);
 
