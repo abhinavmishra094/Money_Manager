@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,12 @@ public class DailyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_daily, container, false);
         listView = (ListView) view.findViewById(R.id.daily);
+
+        Fragment_Graph fragment_graph = new Fragment_Graph();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.graph,fragment_graph);
+        fragmentTransaction.commit();
 
         add = (FloatingActionButton) view.findViewById(R.id.add);
         myDatabase = new MyDatabase(getActivity());

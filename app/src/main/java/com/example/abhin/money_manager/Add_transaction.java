@@ -82,6 +82,7 @@ public class Add_transaction extends Fragment {
         myDatabase = new MyDatabase(getActivity());
         myDatabase.open();
         type.setAdapter(arrayAdapter);
+        ((AddTranscation) getActivity()).setActionBarTitle("Add Transaction");
         cate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -151,20 +152,23 @@ public class Add_transaction extends Fragment {
 
 
 
+               //getActivity().finish();
+
+
                 Intent intent = new Intent(getActivity(),MainActivity.class);
                 startActivity(intent);
 
 
-
-
             }
         });
-       /* cancel.setOnClickListener(new View.OnClickListener() {
+       cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog.dismiss();
+                //Intent intent = new Intent(getActivity(),MainActivity.class);
+                //startActivity(intent);
+                getActivity().finish();
             }
-        });*/
+        });
 
 
        // aBuilder.setView(view);

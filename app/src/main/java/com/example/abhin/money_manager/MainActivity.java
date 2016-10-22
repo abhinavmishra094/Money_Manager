@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Fragment_Graph fragment_graph = new Fragment_Graph();
+       // Fragment_Graph fragment_graph = new Fragment_Graph();
         Fragment_ViewPager fragment_viewPager = new Fragment_ViewPager();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.graph, fragment_graph);
+        //fragmentTransaction.add(R.id.graph, fragment_graph);
         fragmentTransaction.add(R.id.viewpager, fragment_viewPager);
         //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

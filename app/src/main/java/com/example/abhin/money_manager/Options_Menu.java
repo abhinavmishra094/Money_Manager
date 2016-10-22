@@ -69,8 +69,6 @@ public class Options_Menu extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(Options_Menu.this, MainActivity.class);
-                startActivity(intent);
                 finish();
         }
 
