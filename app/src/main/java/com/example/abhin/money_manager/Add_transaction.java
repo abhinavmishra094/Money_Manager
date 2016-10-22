@@ -45,6 +45,7 @@ public class Add_transaction extends Fragment {
     String date;
     String time;
     Time time1;
+    int min;
 
     public Add_transaction() {
         // Required empty public constructor
@@ -122,6 +123,12 @@ public class Add_transaction extends Fragment {
                 Calendar calendar = Calendar.getInstance();
                 Date date1 = new Date();
 
+                min= date1.getMinutes();
+                if(min<10)
+                {
+                    time = date1.getHours() + ":0" + date1.getMinutes();
+                }
+                else
                 time = date1.getHours() + ":" + date1.getMinutes();
                 date = date1.getDay() + "/" + date1.getMonth() + "/" + date1.getYear();
 
@@ -146,6 +153,7 @@ public class Add_transaction extends Fragment {
 
 
                 }
+
 
 
                 myDatabase.insertTransaction(amount, credit, category, date, time, img);

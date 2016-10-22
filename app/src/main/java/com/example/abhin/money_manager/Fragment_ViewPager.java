@@ -61,21 +61,21 @@ public class Fragment_ViewPager extends Fragment {
             if (position == 0) {
 
 
-                return new DailyFragment();
+                return new Transactions();
 
             } else if (position == 1) {
 
-                return new Fragment_Weekly();
+                return new AccountBalace();
             } else if (position == 2) {
 
 
-                return new Fragment_Monthly();
+                return new BorrowLoan();
             } else if (position == 3) {
 
 
-                return new Yearly();
+                return new emiclaculator();
             } else
-                return new DailyFragment();
+                return new Transactions();
 
 
         }

@@ -15,13 +15,13 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_Weekly extends Fragment {
+public class BorrowLoan extends Fragment {
 
     ListView listView;
     ArrayAdapter<String> arrayAdapter;
     ArrayList<String> arrayList;
 
-    public Fragment_Weekly() {
+    public BorrowLoan() {
         // Required empty public constructor
     }
 
@@ -30,14 +30,14 @@ public class Fragment_Weekly extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment__weekly, container, false);
-        listView = (ListView) view.findViewById(R.id.weekly);
+        View view = inflater.inflate(R.layout.fragment__monthly, container, false);
+
         arrayList = new ArrayList<>();
-        arrayList.add("2");
+        listView = (ListView) view.findViewById(R.id.monthly);
+        arrayList.add("3");
         arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
         listView.setAdapter(arrayAdapter);
-
 
         return view;
     }

@@ -18,7 +18,7 @@ import android.widget.ListView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DailyFragment extends Fragment {
+public class Transactions extends Fragment {
 
     ListView listView;
     SimpleCursorAdapter transactions;
@@ -26,7 +26,7 @@ public class DailyFragment extends Fragment {
     Cursor cursor_transactions;
     FloatingActionButton add;
 
-    public DailyFragment() {
+    public Transactions() {
         // Required empty public constructor
     }
 

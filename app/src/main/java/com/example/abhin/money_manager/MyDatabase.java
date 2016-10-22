@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.DatabaseMetaData;
+
 
 public class MyDatabase {
     MyDatabaseHelper myDatabaseHelper;
@@ -14,7 +16,7 @@ public class MyDatabase {
     SQLiteDatabase sqLiteDatabase;
 
     public MyDatabase(Context context) {
-        myDatabaseHelper = new MyDatabaseHelper(context, "money.db", null, 1);
+        myDatabaseHelper = new MyDatabaseHelper(context, "money.db", null, 2);
     }
 
     public void open() {
@@ -73,6 +75,16 @@ public class MyDatabase {
         @Override
         public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+            switch (i1)
+            {
+                case 2:
+
+
+                    break;
+                case 3:
+
+                break;
+            }
         }
     }
 
