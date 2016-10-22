@@ -1,6 +1,7 @@
 package com.example.abhin.money_manager;
 
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -50,8 +51,9 @@ public class DailyFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Add_transaction add_transaction = new Add_transaction();
-                add_transaction.show(getFragmentManager(), null);
+                Intent intent = new Intent(getActivity(),AddTranscation.class);
+
+                startActivity(intent);
             }
         });
 

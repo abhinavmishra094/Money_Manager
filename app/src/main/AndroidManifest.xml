@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Options_Menu" />
+        <activity android:name=".AddTranscation"></activity>
     </application>
 
 </manifest>

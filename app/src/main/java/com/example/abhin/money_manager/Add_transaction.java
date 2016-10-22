@@ -3,12 +3,17 @@ package com.example.abhin.money_manager;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.text.format.Time;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,7 +28,7 @@ import java.util.Date;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Add_transaction extends DialogFragment {
+public class Add_transaction extends Fragment {
 
     Dialog dialog;
 
@@ -46,12 +51,13 @@ public class Add_transaction extends DialogFragment {
     }
 
 
-    @NonNull
+
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        dialog = null;
-        AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
-        aBuilder.setTitle("Add Transactions");
+    public  View onCreateView(LayoutInflater inflater, ViewGroup container,
+                              Bundle savedInstanceState) {
+       // dialog = null;
+        //AlertDialog.Builder aBuilder = new AlertDialog.Builder(getActivity());
+        //aBuilder.setTitle("Add Transactions");
         View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_add_transaction, null);
         amt = (EditText) view.findViewById(R.id.amount);
         type = (Spinner) view.findViewById(R.id.type);
@@ -144,20 +150,26 @@ public class Add_transaction extends DialogFragment {
                 myDatabase.insertTransaction(amount, credit, category, date, time, img);
 
 
-                dialog.dismiss();
+
+                Intent intent = new Intent(getActivity(),MainActivity.class);
+                startActivity(intent);
+
+
+
+
             }
         });
-        cancel.setOnClickListener(new View.OnClickListener() {
+       /* cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
             }
-        });
+        });*/
 
 
-        aBuilder.setView(view);
-        dialog = aBuilder.create();
-        return dialog;
+       // aBuilder.setView(view);
+       // dialog = aBuilder.create();
+        return view;
     }
 
     @Override
