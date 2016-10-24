@@ -36,6 +36,7 @@ public class AccountBalace extends Fragment {
         arrayList.add("2");
         arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
+
         listView.setAdapter(arrayAdapter);
 */
 
