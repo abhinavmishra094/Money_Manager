@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 /**
@@ -48,7 +49,8 @@ public class Transactions extends Fragment {
         myDatabase = new MyDatabase(getActivity());
         myDatabase.open();
         cursor_transactions = myDatabase.getTransactionsReverse();
-        transactions = new SimpleCursorAdapter(getActivity(), R.layout.daily_row, cursor_transactions, new String[]{"image", "amount", "time"}, new int[]{R.id.imgv, R.id.tr1, R.id.ti,});
+
+        transactions = new SimpleCursorAdapter(getActivity(), R.layout.daily_row, cursor_transactions, new String[]{"image", "amount", "time","place"}, new int[]{R.id.imgv, R.id.tr1, R.id.ti,R.id.ps});
 
         add.setImageResource(R.drawable.ic_add_white_48dp);
 

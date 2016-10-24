@@ -46,7 +46,7 @@ public class MyDatabase {
         return transaction;
     }
 
-    public void insertTransaction(int amount, String type, String category, String date, String time, int blob) {
+    public void insertTransaction(int amount, String type, String category, String date, String time, int blob,String place) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("amount", amount);
         contentValues.put("type", type);
@@ -54,7 +54,7 @@ public class MyDatabase {
         contentValues.put("date", date);
         contentValues.put("time", time);
         contentValues.put("image", blob);
-
+        contentValues.put("place",place);
         sqLiteDatabase.insert("transactions", null, contentValues);
 
     }
@@ -67,7 +67,7 @@ public class MyDatabase {
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-            sqLiteDatabase.execSQL("create table transactions(_id integer primary key,amount integer,type text,category text,date text,time text ,image integer);");
+            sqLiteDatabase.execSQL("create table transactions(_id integer primary key,amount integer,type text,category text,date text,time text ,image integer,place text);");
 
 
         }
@@ -78,12 +78,9 @@ public class MyDatabase {
             switch (i1)
             {
                 case 2:
-
-
                     break;
                 case 3:
-
-                break;
+                    break;
             }
         }
     }

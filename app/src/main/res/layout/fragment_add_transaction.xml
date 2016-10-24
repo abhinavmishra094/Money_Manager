@@ -15,6 +15,16 @@
         android:gravity="center"
         android:hint="Enter Amount "
         android:textSize="30sp" />
+    <EditText
+        android:id="@+id/psend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:hint="Place Spend On "
+        android:textSize="30sp" />
+
 
     <Spinner
         android:id="@+id/type"

@@ -13,4 +13,5 @@
     <string name="suggest">Suggest Feature</string>
     <string name="about_us">about us</string>
     <string name="title_activity_daily_frag">DailyFragActivity</string>
+    <string name="plce_spend_on">Place Spend On</string>
 </resources>

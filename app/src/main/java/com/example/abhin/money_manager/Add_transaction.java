@@ -43,8 +43,8 @@ public class Add_transaction extends Fragment {
     String credit;
     int amount;
     String date;
-    String time;
-    Time time1;
+    String time,psend;
+    EditText place_spend;
     int min;
 
     public Add_transaction() {
@@ -64,6 +64,8 @@ public class Add_transaction extends Fragment {
         type = (Spinner) view.findViewById(R.id.type);
         cate = (Spinner) view.findViewById(R.id.Creditdebit);
         add = (Button) view.findViewById(R.id.add);
+        place_spend = (EditText) view.findViewById(R.id.psend);
+
         cancel = (Button) view.findViewById(R.id.cancel);
         img = R.drawable.ic_account_balance_black_48dp;
         type3 = new ArrayList<String>();
@@ -134,21 +136,21 @@ public class Add_transaction extends Fragment {
 
 
                 amount = Integer.parseInt(amt.getText().toString());
-
+                psend = place_spend.getText().toString();
 
                 switch (category) {
                     case "Food":
-                        img = R.drawable.ic_account_balance_black_48dp;
+                        img = R.drawable.food;
                         break;
 
                     case "Shopping":
-                        img = R.drawable.ic_account_balance_wallet_black_48dp;
+                        img = R.drawable.shoppingicon;
                         break;
                     case "Fuel":
-                        img = R.drawable.ic_account_balance_black_48dp;
+                        img = R.drawable.fuel;
                         break;
                     case "Misc":
-                        img = R.drawable.ic_account_circle_black_48dp;
+                        img = R.drawable.walleticon;
                         break;
 
 
@@ -156,7 +158,7 @@ public class Add_transaction extends Fragment {
 
 
 
-                myDatabase.insertTransaction(amount, credit, category, date, time, img);
+                myDatabase.insertTransaction(amount, credit, category, date, time, img,psend);
 
 
 
