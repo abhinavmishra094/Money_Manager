@@ -3,25 +3,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_credit"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Add Credit" />
+            android:id="@+id/faq"
+            android:icon="@drawable/faq"
+            android:title="FAQ" />
         <item
-            android:id="@+id/nav_custom_expenditure"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Custom Expenditure" />
+            android:id="@+id/inv_fri"
+            android:icon="@drawable/friendsicon"
+            android:title="Invite Friends" />
         <item
-            android:id="@+id/nav_daily"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Daily Expenditure  " />
+            android:id="@+id/supp"
+            android:icon="@drawable/support"
+            android:title="Support  " />
         <item
-            android:id="@+id/nav_monthly"
+            android:id="@+id/setting"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Monthly Expenditure" />
+            android:title="Settings" />
         <item
-            android:id="@+id/nav_expend_limit"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Expenditure" />
+            android:id="@+id/about"
+            android:icon="@drawable/about"
+            android:title="About Us" />
     </group>
 
 

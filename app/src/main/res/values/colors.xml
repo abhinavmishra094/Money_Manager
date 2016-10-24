@@ -9,4 +9,7 @@
     <color name="green">#0f0</color>
     <color name="grey">#696969</color>
     <color name="blue">#00f</color>
+    <color name="blueishgrey">#ff3a5b68</color>
+    <color name="white">#fff</color>
+    <color name="milhywhite">#fff8f8f8</color>
 </resources>

@@ -35,8 +35,10 @@
             android:text="@string/plce_spend_on"
             android:gravity="center"
             android:id="@+id/ps"
+            android:elevation="1dp"
             android:textStyle="italic|bold"
             android:textAllCaps="true"
+            android:background="@color/milhywhite"
             android:textColor="@color/blue"
             android:textSize="26dp"/>
     </LinearLayout>

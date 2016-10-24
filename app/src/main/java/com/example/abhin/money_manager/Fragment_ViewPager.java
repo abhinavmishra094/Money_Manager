@@ -41,8 +41,8 @@ public class Fragment_ViewPager extends Fragment {
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_view_list_black_48dp);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_account_balance_black_48dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_account_balance_wallet_white_48dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_account_balance_wallet_white_48dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_people_black_48dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.money);
 
 
         return view;

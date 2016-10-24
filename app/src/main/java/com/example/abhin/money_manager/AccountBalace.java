@@ -31,13 +31,13 @@ public class AccountBalace extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment__weekly, container, false);
-        listView = (ListView) view.findViewById(R.id.weekly);
-        arrayList = new ArrayList<>();
+        listView = (ListView) view.findViewById(R.id.lv1);
+        /*arrayList = new ArrayList<>();
         arrayList.add("2");
         arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, arrayList);
 
         listView.setAdapter(arrayAdapter);
-
+*/
 
         return view;
     }

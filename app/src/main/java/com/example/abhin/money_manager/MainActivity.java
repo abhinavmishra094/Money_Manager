@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.main, menu);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -101,29 +101,29 @@ public class MainActivity extends AppCompatActivity
 
 
         switch (id) {
-            case R.id.nav_credit:
+            case R.id.faq:
 
                 intent.putExtra("option_selected", "credit");
                 startActivity(intent);
                 break;
 
-            case R.id.nav_custom_expenditure:
+            case R.id.inv_fri:
 
                 intent.putExtra("option_selected", "expenditure");
                 startActivity(intent);
                 break;
 
 
-            case R.id.nav_daily:
+            case R.id.supp:
                 intent.putExtra("option_selected", "daily");
                 startActivity(intent);
                 break;
 
-            case R.id.nav_expend_limit:
+            case R.id.setting:
 
                 break;
 
-            case R.id.nav_monthly:
+            case R.id.about:
 
 
                 break;
