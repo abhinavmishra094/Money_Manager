@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.abhin.money_manager.pie_fragment">
 
-    <com.jjoe64.graphview.GraphView
+    <com.github.mikephil.charting.charts.PieChart
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/g_pie"

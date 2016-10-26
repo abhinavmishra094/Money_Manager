@@ -26,5 +26,6 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.jjoe64:graphview:4.2.1'
     //androidTestCompile 'org.achartengine:achrtengine:1.2.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.0.9'
     testCompile 'junit:junit:4.12'
 }

@@ -1,6 +1,7 @@
 package com.example.abhin.money_manager;
 
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -84,6 +85,7 @@ public class Fragment_Graph extends Fragment {
         mytab.getTabAt(1).setIcon(R.drawable.ic_radio_button_unchecked_black_24dp);
         mytab.getTabAt(2).setIcon(R.drawable.ic_radio_button_unchecked_black_24dp);
 
+        new setAdapterTask().execute();
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -118,6 +120,24 @@ public class Fragment_Graph extends Fragment {
             }
         });
         return view;
+    }
+    private class setAdapterTask extends AsyncTask<Void,Void,Void>
+
+    {
+        protected Void doInBackground(Void... params) {
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            viewPager.setAdapter(graphPager);
+            mytab.setupWithViewPager(viewPager);
+            mytab.setSelectedTabIndicatorColor(00);
+            mytab.getTabAt(0).setIcon(R.drawable.ic_radio_button_checked_black_24dp);
+            mytab.getTabAt(1).setIcon(R.drawable.ic_radio_button_unchecked_black_24dp);
+            mytab.getTabAt(2).setIcon(R.drawable.ic_radio_button_unchecked_black_24dp);
+
+        }
     }
 
 }

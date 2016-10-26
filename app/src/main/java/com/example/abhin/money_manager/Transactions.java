@@ -3,6 +3,7 @@ package com.example.abhin.money_manager;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import static android.support.v4.widget.CursorAdapter.FLAG_AUTO_REQUERY;
 
 
 /**
@@ -50,7 +53,8 @@ public class Transactions extends Fragment {
         myDatabase.open();
         cursor_transactions = myDatabase.getTransactionsReverse();
 
-        transactions = new SimpleCursorAdapter(getActivity(), R.layout.daily_row, cursor_transactions, new String[]{"image", "amount", "time","place"}, new int[]{R.id.imgv, R.id.tr1, R.id.ti,R.id.ps});
+       // int flag = FLAG_AUTO_REQUERY;
+        transactions = new SimpleCursorAdapter(getActivity(), R.layout.daily_row, cursor_transactions, new String[]{"image", "amount", "time","place"}, new int[]{R.id.imgv, R.id.tr1, R.id.ti,R.id.ps},1);
 
         add.setImageResource(R.drawable.ic_add_white_48dp);
 
@@ -82,4 +86,5 @@ public class Transactions extends Fragment {
         super.onDestroy();
         myDatabase.close();
     }
+
 }
