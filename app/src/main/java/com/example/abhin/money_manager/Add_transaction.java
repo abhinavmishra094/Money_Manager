@@ -46,6 +46,7 @@ public class Add_transaction extends Fragment {
     String time,psend;
     EditText place_spend;
     int min;
+    ArrayList<String> Category1;
 
     public Add_transaction() {
         // Required empty public constructor
@@ -65,7 +66,11 @@ public class Add_transaction extends Fragment {
         cate = (Spinner) view.findViewById(R.id.Creditdebit);
         add = (Button) view.findViewById(R.id.add);
         place_spend = (EditText) view.findViewById(R.id.psend);
-
+        Category1 = new ArrayList<>();
+        Category1.add("Category");
+        Category1.add("Cash");
+        Category1.add("Bank");
+        Category1.add("Salery");
         cancel = (Button) view.findViewById(R.id.cancel);
         img = R.drawable.ic_account_balance_black_48dp;
         type3 = new ArrayList<String>();
@@ -79,13 +84,37 @@ public class Add_transaction extends Fragment {
         type3.add("Type of Transaction");
         type3.add("Debit");
         type3.add("Credit");
-        arrayAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Category);
+
         arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, type3);
         cate.setAdapter(arrayAdapter1);
         myDatabase = new MyDatabase(getActivity());
         myDatabase.open();
         type.setAdapter(arrayAdapter);
         ((AddTranscation) getActivity()).setActionBarTitle("Add Transaction");
+        type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (type3.get(i).equals("Type of Transaction")) {
+
+                } else if (type3.get(i).equals("Debit")){
+                    credit = type3.get(i);
+                    arrayAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Category);
+                    cate.setAdapter(arrayAdapter1);
+
+                }
+                else if (type3.get(i).equals("Credit")){
+                    credit = type3.get(i);
+                    arrayAdapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Category1);
+                    cate.setAdapter(arrayAdapter1);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         cate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -102,22 +131,7 @@ public class Add_transaction extends Fragment {
 
             }
         });
-        type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                if (type3.get(i).equals("Type of Transaction")) {
-
-                } else {
-                    credit = type3.get(i);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
