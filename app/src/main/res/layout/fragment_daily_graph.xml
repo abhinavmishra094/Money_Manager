@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.abhin.money_manager.daily_graph">
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graph"
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/grey" />
